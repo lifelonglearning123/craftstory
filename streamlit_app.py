@@ -530,7 +530,7 @@ with st.sidebar:
     image_to_process = picture if picture else uploaded_image
     
     if image_to_process:
-        image_description = describeImage(picture.getvalue(), language)
+        image_description = describeImage(image_to_process.getvalue(), language)
         picture_desc = image_description.choices[0].message.content
         st.info(f"Image Description: {picture_desc}")
 
